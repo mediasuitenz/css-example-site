@@ -18,3 +18,5 @@ sass --watch scss/style.scss css/style.css
 ```
 
 Load up the index.html file
+
+Switch between Flexbox and Float layouts by selecting the "switch" link in the navigation bar.
