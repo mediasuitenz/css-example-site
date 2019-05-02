@@ -1,0 +1,9 @@
+__pycache__/
+**.pyc
+.idea/
+**.DS_Store
+.vscode.pytest_cache
+.pytest_cache
+.vscode
+/server/db.sqlite3
+.env

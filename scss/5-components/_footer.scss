@@ -1,0 +1,40 @@
+.c-footer {
+  background: $neutral--100;
+  border-top:1px solid $neutral--200;
+
+  &__column{
+    flex-grow: 1;
+    margin: 40px $column--alley 40px 0;
+  }
+
+  &__menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+    &__menu-item{
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+
+      &--title{
+        font-weight: bold;
+      }
+    }
+}
+.c-footer__container{
+  @extend .l-content-container;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet-landscape-down{
+    display: block;
+  }
+}
+
+.c-social-icon{
+  margin-right: 20px;
+  cursor: pointer;
+}

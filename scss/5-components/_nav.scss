@@ -1,0 +1,138 @@
+.c-nav {
+  background-color: $app-nav--bg;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  &__content {
+    @include container;
+    display: flex;
+    align-items: center;
+    height: 61px;
+
+    @include tablet-landscape-down{
+      display: block;
+      height: initial;
+      position: relative;
+      padding: 10px 20px;
+    }
+  }
+
+  &__logo {
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: $weight--bold;
+    color: $app-nav--logo-text-color;
+    text-decoration: none;
+    flex-shrink:0;
+  }
+
+  &-label{
+    display: none;
+
+    &--show{
+      display: inline-block;
+    }
+  }
+
+  &__switch{
+    font-size: 1.6rem;
+    color: $color--white;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  
+  &__items {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow:1;
+    margin: 0;
+    align-items: center;
+
+    @include tablet-landscape-down{
+      display: none;
+      width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }
+  
+  &__item {
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 40px;
+    color: $color--white;
+    cursor: pointer;
+
+    @include tablet-landscape-down{
+      margin: 10px 0;
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
+    
+    &--button{
+      @include transition--150;
+      color: $color--white;
+      background: $primary--900;
+      border: 2px solid $color--white;
+      padding: 8px 15px;
+      border-radius: $radius--medium;
+
+      @include tablet-landscape-down{
+        display: inline-block;
+      }
+
+      &:hover{
+        @include box-shadow--small;
+        text-decoration: none;
+        background: $color--white;
+        color: $primary--900;
+      } 
+    }
+  }
+}
+
+.c-nav-mobile{
+  display: none;
+
+  @include tablet-landscape-down{
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+  }
+}
+
+/* FLOATS */
+
+.floats .c-nav {
+  &__content {
+    display: block;
+  }
+
+  &__logo {
+    float: left;
+    padding-top: 19px;
+
+    @include tablet-landscape-down{
+      padding-top: 0;
+    }
+  }
+  
+  &__items {
+    display: block;
+    float: right;
+    padding-top: 10px;
+
+    @include tablet-landscape-down{
+      display: none;
+    }
+  } 
+
+  &__item {
+    display: inline-block;
+  }  
+}

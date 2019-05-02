@@ -1,0 +1,59 @@
+.l-content-container {
+  @include container;
+}
+
+.l-main-content-wrapper {
+  background: $color--white;
+  padding: 20px 0 50px 0;
+}
+
+.l-main-content-area {
+  display: flex;
+
+  @include tablet-landscape-down{
+    display: block;
+  }
+}
+
+.l-page-content-area {
+    font-size: 1.6rem;
+}
+
+.l-sidebar-area{
+  width: 275px;
+  margin-right: $column--alley;
+  background:$neutral--300;
+  border-radius: $radius--small;
+  flex-shrink:0;
+
+  @include tablet-landscape-down{
+    width: 100%;
+    //background: none;
+    float:none;
+  }
+}
+
+/* FLOATS */
+
+
+.floats {
+  .l-main-content-area {
+    display: block;
+  }
+
+  .l-page-content-area {
+    float:left;
+    width: calc(100% - 325px);
+
+    @include tablet-landscape-down{
+      width: 100%;
+    }
+  }
+
+  .l-sidebar-area{
+    float: left;
+  }
+
+}
+
+

@@ -1,0 +1,43 @@
+.c-sub-header {
+  background: $neutral--100;
+  border-bottom:1px solid $neutral--200;
+
+  &__breadcrumb {
+    margin: 0;
+    padding: 15px 0;
+    list-style: none;
+    display: flex;
+  }
+
+  &__breadcrumb-item{
+    margin-right: 10px;
+
+    &:before{
+      content:'/'; 
+      margin-right: 10px;
+      position: relative;
+    }
+
+    &:first-child:before{
+      display:none; 
+    }
+  }
+  &__title{
+    margin: 0 0 20px 0;
+  }
+}
+
+
+/* FLOATS */
+
+.floats .c-sub-header{
+  
+  &__breadcrumb{
+    display: inline-block;
+
+  }
+  
+  &__breadcrumb-item{
+      display: inline-block;
+  }
+}

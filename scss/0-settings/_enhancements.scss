@@ -1,0 +1,28 @@
+/***************************************************
+* Enhancements
+***************************************************/
+
+/**
+* Border Radius
+*/
+$radius--small: 3px;
+$radius--medium: 5px;
+$radius--large: 10px;
+
+
+/**
+* Transitions
+*/
+@mixin transition--150 {
+  transition: all 0.15s ease;
+}
+
+/**
+* Box shadows
+*/
+@mixin box-shadow--small{
+  box-shadow: 2px 2px 2px #00000021;
+}
+
+
+

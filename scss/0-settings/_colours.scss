@@ -1,0 +1,87 @@
+/***************************************************
+* Palette - default colours/shades/tints
+***************************************************/
+
+/**
+* Primary colour shades
+*/
+$primary--900: #0098CD;
+$primary--800: #1aa2d2;
+$primary--700: #33add7;
+$primary--600: #4db7dc;
+$primary--500: #66c1e1;
+$primary--400: #80cce6;
+$primary--300: #99d6eb;
+$primary--200: #b3e0f0;
+$primary--100: #cceaf5;
+
+
+/**
+* Black/grey shades
+*/
+$neutral--900: #585858;
+$neutral--800: #696969;
+$neutral--600: #797979;
+$neutral--500: #8a8a8a;
+$neutral--400: #9b9b9b;
+$neutral--300: #E2ECEF;
+$neutral--200: #D8D8D8;
+$neutral--100: #F1F3F6;
+
+
+/**
+* White
+*/
+$color--primary: $primary--900;
+$color--white: #fff;
+
+
+
+/***************************************************
+* App colour settings
+***************************************************/
+
+/**
+* Base
+*/
+$page-bg: $neutral--100;
+
+
+/**
+* Typography
+*/
+$color--body-text: $neutral--900;
+$color--primary-text: $primary--500;
+
+
+/**
+* Components
+*/
+
+// App nav
+$app-nav--bg: $primary--900;
+$app-nav--border-color: $neutral--200;
+$app-nav--logo-text-color: $color--white;
+
+// Skip to content link
+$skip-to-content-link--bg: $color--white;
+
+// Primary action
+$primary-action--bg: $color--primary;
+$primary-action--hover-bg: $primary--600;
+$primary-action--text: $color--white;
+
+// Secondary action
+$secondary-action--text: $color--primary;
+$secondary-action--hover-text: $primary--600;
+
+// Form input
+$form-input--bg: $color--white;
+$form-input--border-color: $neutral--300;
+$form-input--hover-border-color: $color--primary;
+$form-input--disabled-bg: $neutral--100;
+$form-input--disabled-border-color: $neutral--200;
+$form-input--disabled-text: $neutral--400;
+
+// Checkable fields
+$checkable-field--disabled-text: $neutral--400;
