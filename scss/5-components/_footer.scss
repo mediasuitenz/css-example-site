@@ -3,8 +3,22 @@
   border-top:1px solid $neutral--200;
 
   &__column{
-    flex-grow: 1;
-    margin: 40px $column--alley 40px 0;
+     margin: 40px $column--alley 40px 0;
+     display: inline-block;
+     vertical-align: top;
+     width: 20%;
+
+     @include tablet-landscape-down {
+      width: 100%;
+      margin:20px 0;
+    }
+  }
+
+  &__container {
+    @extend .l-content-container;
+    @include tablet-landscape-down {
+      display: block;
+    }
   }
 
   &__menu{
@@ -24,17 +38,26 @@
       }
     }
 }
-.c-footer__container{
-  @extend .l-content-container;
-  display: flex;
-  justify-content: space-between;
-
-  @include tablet-landscape-down{
-    display: block;
-  }
-}
 
 .c-social-icon{
   margin-right: 20px;
   cursor: pointer;
+}
+
+/* FLEXBOX */
+
+.flex .c-footer{
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet-landscape-down {
+      flex-direction: column;
+    }
+  }
+
+  &__column{
+    flex-grow: 1;
+  }
 }

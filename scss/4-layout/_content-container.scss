@@ -8,7 +8,7 @@
 }
 
 .l-main-content-area {
-  display: flex;
+  display: block;
 
   @include tablet-landscape-down {
     display: block;
@@ -16,7 +16,13 @@
 }
 
 .l-page-content-area {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
+  float:left;
+  width: calc(100% - 325px);
+
+  @include tablet-landscape-down {
+    width: 100%;
+  }
 }
 
 .l-sidebar-area{
@@ -24,7 +30,7 @@
   margin-right: $column--alley;
   background:$neutral--300;
   border-radius: $radius--small;
-  flex-shrink:0;
+  float: left;
 
   @include tablet-landscape-down {
     width: 100%;
@@ -33,27 +39,27 @@
   }
 }
 
-/* FLOATS */
+/* FLEXBOX */
 
 
-.floats {
+.flex {
   .l-main-content-area {
-    display: block;
+    display: flex;
+
+    @include tablet-landscape-down {
+      flex-direction: column;
+    }
   }
 
   .l-page-content-area {
-    float:left;
-    width: calc(100% - 325px);
-
     @include tablet-landscape-down {
       width: 100%;
     }
   }
 
   .l-sidebar-area{
-    float: left;
+    flex-shrink:0;
   }
-
 }
 
 

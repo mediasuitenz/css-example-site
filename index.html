@@ -21,10 +21,10 @@
   </head>
   <body>
     <header class="c-nav">
-      <div class="c-nav__content">
+      <div class="c-nav__content clearfix">
         <div class="c-nav__logo">
-          <span class="c-nav__label c-nav__label--show">Flexbox layout</span>
-          <span class="c-nav__label">Floats layout</span>
+          <span class="c-nav__label c-nav__label--show">Floats layout</span>
+          <span class="c-nav__label">Flexbox layout</span>
           <span class="c-nav__switch">switch</span>
         </div>
           <ul class="c-nav__items">
@@ -53,7 +53,7 @@
 
     <main class="l-main-content-wrapper">
       <div class="l-content-container">
-      <div class="l-main-content-area">
+      <div class="l-main-content-area clearfix">
         <div class="l-sidebar-area">
           <ul class="c-sidebar-nav">
             <li class="c-sidebar-nav__item c-sidebar-nav__item--active">Lorem ipsum</li>
@@ -164,9 +164,8 @@
     <script>
       $(document).ready(function(){
         $(".c-nav__switch").click(function () {
-          $("body").toggleClass("floats");
+          $("body").toggleClass("flex");
           $(".l-main-content-area").toggleClass("clearfix");
-          $(".c-nav__content").toggleClass("clearfix");
           $(".c-nav__label").toggleClass("c-nav__label--show");
         });
 

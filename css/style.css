@@ -634,7 +634,7 @@ h6 {
 }
 
 .l-main-content-area {
-  display: flex;
+  display: block;
 }
 @media (max-width: 899px) {
   .l-main-content-area {
@@ -644,6 +644,13 @@ h6 {
 
 .l-page-content-area {
   font-size: 1.6rem;
+  float: left;
+  width: calc(100% - 325px);
+}
+@media (max-width: 899px) {
+  .l-page-content-area {
+    width: 100%;
+  }
 }
 
 .l-sidebar-area {
@@ -651,7 +658,7 @@ h6 {
   margin-right: 50px;
   background: #E2ECEF;
   border-radius: 3px;
-  flex-shrink: 0;
+  float: left;
 }
 @media (max-width: 899px) {
   .l-sidebar-area {
@@ -660,21 +667,22 @@ h6 {
   }
 }
 
-/* FLOATS */
-.floats .l-main-content-area {
-  display: block;
-}
-.floats .l-page-content-area {
-  float: left;
-  width: calc(100% - 325px);
+/* FLEXBOX */
+.flex .l-main-content-area {
+  display: flex;
 }
 @media (max-width: 899px) {
-  .floats .l-page-content-area {
+  .flex .l-main-content-area {
+    flex-direction: column;
+  }
+}
+@media (max-width: 899px) {
+  .flex .l-page-content-area {
     width: 100%;
   }
 }
-.floats .l-sidebar-area {
-  float: left;
+.flex .l-sidebar-area {
+  flex-shrink: 0;
 }
 
 /**# Simple Grid
@@ -885,8 +893,6 @@ would be given the class name .col-6-sm.
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: center;
   height: 61px;
 }
 @media (max-width: 899px) {
@@ -903,7 +909,13 @@ would be given the class name .col-6-sm.
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  flex-shrink: 0;
+  float: left;
+  padding-top: 19px;
+}
+@media (max-width: 899px) {
+  .c-nav__logo {
+    padding-top: 0;
+  }
 }
 .c-nav__label {
   display: none;
@@ -920,18 +932,15 @@ would be given the class name .col-6-sm.
   margin-left: 10px;
 }
 .c-nav__items {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
+  float: right;
+  padding-top: 10px;
   margin: 0;
-  align-items: center;
 }
 @media (max-width: 899px) {
   .c-nav__items {
     display: none;
     width: 100%;
     padding-left: 0;
-    margin-top: 20px;
   }
 }
 .c-nav__item {
@@ -941,10 +950,12 @@ would be given the class name .col-6-sm.
   margin-left: 40px;
   color: #fff;
   cursor: pointer;
+  display: inline-block;
 }
 @media (max-width: 899px) {
   .c-nav__item {
     margin: 10px 0;
+    display: block;
   }
 }
 .c-nav__item:hover {
@@ -982,31 +993,32 @@ would be given the class name .col-6-sm.
   }
 }
 
-/* FLOATS */
-.floats .c-nav__content {
-  display: block;
-}
-.floats .c-nav__logo {
-  float: left;
-  padding-top: 19px;
+/* FLEXBOX */
+.flex .c-nav__content {
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 899px) {
-  .floats .c-nav__logo {
-    padding-top: 0;
+  .flex .c-nav__content {
+    display: block;
   }
 }
-.floats .c-nav__items {
-  display: block;
-  float: right;
-  padding-top: 10px;
+.flex .c-nav__logo {
+  flex-shrink: 0;
+  padding-top: 0;
+}
+.flex .c-nav__items {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-items: center;
+  padding-top: 0;
 }
 @media (max-width: 899px) {
-  .floats .c-nav__items {
+  .flex .c-nav__items {
     display: none;
+    margin-top: 20px;
   }
-}
-.floats .c-nav__item {
-  display: inline-block;
 }
 
 .c-footer {
@@ -1014,8 +1026,21 @@ would be given the class name .col-6-sm.
   border-top: 1px solid #D8D8D8;
 }
 .c-footer__column {
-  flex-grow: 1;
   margin: 40px 50px 40px 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+@media (max-width: 899px) {
+  .c-footer__column {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 899px) {
+  .c-footer__container {
+    display: block;
+  }
 }
 .c-footer__menu {
   list-style: none;
@@ -1032,19 +1057,23 @@ would be given the class name .col-6-sm.
   font-weight: bold;
 }
 
-.c-footer__container {
+.c-social-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* FLEXBOX */
+.flex .c-footer__container {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 899px) {
-  .c-footer__container {
-    display: block;
+  .flex .c-footer__container {
+    flex-direction: column;
   }
 }
-
-.c-social-icon {
-  margin-right: 20px;
-  cursor: pointer;
+.flex .c-footer__column {
+  flex-grow: 1;
 }
 
 .c-field-container {
@@ -1204,13 +1233,14 @@ would be given the class name .col-6-sm.
   border-bottom: 1px solid #D8D8D8;
 }
 .c-sub-header__breadcrumb {
+  display: inline-block;
   margin: 0;
   padding: 15px 0;
   list-style: none;
-  display: flex;
 }
 .c-sub-header__breadcrumb-item {
   margin-right: 10px;
+  display: inline-block;
 }
 .c-sub-header__breadcrumb-item:before {
   content: "/";
@@ -1224,12 +1254,9 @@ would be given the class name .col-6-sm.
   margin: 0 0 20px 0;
 }
 
-/* FLOATS */
-.floats .c-sub-header__breadcrumb {
-  display: inline-block;
-}
-.floats .c-sub-header__breadcrumb-item {
-  display: inline-block;
+/* FLEXBOX */
+.flex .c-sub-header__breadcrumb {
+  display: flex;
 }
 
 .c-sidebar-nav {
