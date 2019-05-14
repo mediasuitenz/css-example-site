@@ -877,7 +877,6 @@ would be given the class name .col-6-sm.
 }
 .c-nav {
   background-color: #0098CD;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .c-nav__content {
   box-sizing: content-box;
@@ -906,10 +905,10 @@ would be given the class name .col-6-sm.
   text-decoration: none;
   flex-shrink: 0;
 }
-.c-nav-label {
+.c-nav__label {
   display: none;
 }
-.c-nav-label--show {
+.c-nav__label--show {
   display: inline-block;
 }
 .c-nav__switch {
@@ -971,11 +970,11 @@ would be given the class name .col-6-sm.
   color: #0098CD;
 }
 
-.c-nav-mobile {
+.c-nav__mobile {
   display: none;
 }
 @media (max-width: 899px) {
-  .c-nav-mobile {
+  .c-nav__mobile {
     display: block;
     position: absolute;
     top: 13px;

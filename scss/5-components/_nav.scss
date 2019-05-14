@@ -1,6 +1,5 @@
 .c-nav {
   background-color: $app-nav--bg;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
   &__content {
     @include container;
@@ -8,7 +7,7 @@
     align-items: center;
     height: 61px;
 
-    @include tablet-landscape-down{
+    @include tablet-landscape-down {
       display: block;
       height: initial;
       position: relative;
@@ -25,7 +24,7 @@
     flex-shrink:0;
   }
 
-  &-label{
+  &__label{
     display: none;
 
     &--show{
@@ -95,10 +94,10 @@
   }
 }
 
-.c-nav-mobile{
+.c-nav__mobile{
   display: none;
 
-  @include tablet-landscape-down{
+  @include tablet-landscape-down {
     display: block;
     position: absolute;
     top: 13px;

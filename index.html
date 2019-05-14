@@ -23,8 +23,8 @@
     <header class="c-nav">
       <div class="c-nav__content">
         <div class="c-nav__logo">
-          <span class="c-nav-label c-nav-label--show">Flexbox layout</span>
-          <span class="c-nav-label">Floats layout</span>
+          <span class="c-nav__label c-nav__label--show">Flexbox layout</span>
+          <span class="c-nav__label">Floats layout</span>
           <span class="c-nav__switch">switch</span>
         </div>
           <ul class="c-nav__items">
@@ -34,7 +34,7 @@
             <li class="c-nav__item">Contact</li>
             <li class="c-nav__item c-nav__item--button">Sign in</li>
           </ul>
-          <div class="c-nav-mobile">
+          <div class="c-nav__mobile">
             <svg width="24" height="23" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
             <use xlink:href="#img-menu"></use>
             </svg>
@@ -63,7 +63,7 @@
           </ul>
         </div>
         <div class="l-page-content-area">
-          <h2>Lorem ipsum</h2>
+          <h2>Lorem ipsum</h2>  
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit mauris neque, eu aliquam eros ornare non. Praesent elementum arcu vitae pellentesque vulputate. Quisque auctor libero vitae dolor suscipit eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ut velit vel libero finibus efficitur.</p>
 
           <form>
@@ -167,10 +167,10 @@
           $("body").toggleClass("floats");
           $(".l-main-content-area").toggleClass("clearfix");
           $(".c-nav__content").toggleClass("clearfix");
-          $(".c-nav-label").toggleClass("c-nav-label--show");
+          $(".c-nav__label").toggleClass("c-nav__label--show");
         });
 
-        $(".c-nav-mobile").click(function () {
+        $(".c-nav__mobile").click(function () {
           $(".c-nav__items").toggle();
         });
       });
